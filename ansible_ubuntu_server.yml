@@ -1,0 +1,9 @@
+---
+
+- name: Ubuntu playbook for servers
+  hosts: ubuntu_servers
+  roles:
+    # Common roles
+    - { role: locales, become: true }
+    - { role: common, become: true }
+    - { role: docker, become: true }
